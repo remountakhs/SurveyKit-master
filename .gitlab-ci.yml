@@ -1,0 +1,31 @@
+variables:
+  GIT_CLEAN_FLAGS: none
+
+stages:
+  - test
+  - deploy
+
+unitTests:
+  stage: test
+  tags:
+    - android
+  script:
+    - ./gradlew clean
+    - ./gradlew testDebugUnitTest
+
+appTests:
+  tags:
+    - android
+    - emulator
+  stage: test
+  script:
+    - ./gradlew clean
+    - ./gradlew cDAT
+
+deployRelease:
+  stage: deploy
+  only:
+    - tags
+  script:
+    - ./gradlew publish
+

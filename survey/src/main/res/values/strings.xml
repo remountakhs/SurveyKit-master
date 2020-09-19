@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="empty" translatable="false" />
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string name="start">Start</string>
+    <string name="finish">Finish</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+
+    <string name="date_time_picker_show_time_button_text">Set time</string>
+    <string name="date_time_picker_show_date_button_text">Set date</string>
+    <string name="abort_dialog_title">Leave</string>
+    <string name="abort_dialog_message">If you leave now, your current answers are lost.</string>
+    <string name="abort_dialog_neutral_message">Back to the survey</string>
+    <string name="abort_dialog_negative_message">Cancel Survey</string>
+</resources>
