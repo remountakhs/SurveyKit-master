@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jetbrains.kotlin.android.extensions")
+    id("com.google.gms.google-services")
 }
 
 androidExtensions { isExperimental = true }
@@ -32,4 +33,6 @@ dependencies {
     /* Android Support */
     implementation(Deps.AndroidSupport.appCompat)
     implementation(Deps.AndroidSupport.constraint)
+    implementation("com.google.firebase:firebase-firestore-ktx:21.6.0")
+    implementation("com.google.firebase:firebase-database-ktx:19.4.0")
 }

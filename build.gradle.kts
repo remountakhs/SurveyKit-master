@@ -10,6 +10,8 @@ buildscript {
 
     dependencies {
         classpath(Deps.Plugins.kotlin)
+        classpath("com.google.gms:google-services:4.3.3")
+//        classpath 'com.google.gms:google-services:4.3.3'
     }
 }
 

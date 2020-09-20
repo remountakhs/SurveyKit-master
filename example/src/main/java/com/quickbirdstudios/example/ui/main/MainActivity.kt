@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.quickbirdstudios.example.R
 import com.quickbirdstudios.surveykit.AnswerFormat
 import com.quickbirdstudios.surveykit.FinishReason
@@ -38,6 +40,11 @@ class MainActivity : AppCompatActivity() {
 
     protected lateinit var survey: SurveyView
     private lateinit var container: ViewGroup
+    private val database = Firebase.database
+
+    private val myRef = database.getReferenceFromUrl("https://example-b3d8f.firebaseio.com/message")
+//    private val myRef = myRef.child("message")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +52,8 @@ class MainActivity : AppCompatActivity() {
 
         survey = findViewById(R.id.survey_view)
         container = findViewById(R.id.surveyContainer)
+        myRef.setValue("Hello, World HELLLOOEEEE!")
+//        database.
         setupSurvey(survey)
 
     }
